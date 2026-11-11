@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ballet Santa Dorotéia</title>
+<meta name="description" content="Galeria de fotos do Ballet Santa Dorotéia.">
+<meta property="og:title" content="Ballet Santa Dorotéia">
+<meta property="og:description" content="Galeria de fotos. Toque em uma foto para ver e baixar.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23140b06'/%3E%3Cpath d='M9 6 C 7 9, 8 21, 11 26 C 12 27.5, 15 27.5, 15 25.5 L 14 12 C 13.5 9, 11.5 8, 9 6 Z M18 7 C 16 10, 17 21, 19.5 26 C 20.5 27.5, 23.5 27.5, 23.5 25.5 L 22.5 12 C 22 9, 20.5 8.5, 18 7 Z' fill='%23ff4f12'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;1,500;1,600&family=Nunito:wght@400;600;800&display=swap">
+<style>
+:root{
+  /* Layout: sapatilha de ponta — fita de cetim no topo, par de sapatilhas no lugar do logo, preto e laranja-vermelho */
+  --bg:#fff2e8; --surface:#fffaf5; --fg:#160c07; --muted:#7d5644; --line:#f4d8c6;
+  --accent:#ff4f12; --accent-ink:#160c07; --scrim:rgba(10,6,4,.96);
+  --o1:#ff4f12; --o2:#ff7a3d; --o3:#e03a08; --o4:#ffa06b; --o5:#160c07; --o6:#c92f05;
+  --ribbon:#ff4f12;
+  --script:"Great Vibes","Brush Script MT",cursive; --serif:"Playfair Display",Georgia,serif;
+  --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{--bg:#0a0605;--surface:#170f0b;--fg:#fff0e5;--muted:#c99d86;--line:#2e1d14;--accent:#ff5a1f;--accent-ink:#0a0605;--o5:#fff0e5;color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding:env(safe-area-inset-top,0px) max(16px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(16px,env(safe-area-inset-left,0px))}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* fita de cetim ondulada no topo (no lugar das bandeirinhas) */
+.ribbon{max-width:1240px;margin:0 auto;height:30px;color:var(--ribbon)}
+.ribbon svg{display:block;width:100%;height:100%}
+.wrap{max-width:1240px;margin:0 auto;padding-block:24px 64px;display:flex;flex-direction:column;gap:32px}
+header{display:flex;align-items:center;gap:clamp(14px,4vw,40px);flex-wrap:wrap}
+.shoes{flex:none;width:clamp(92px,16vw,150px);margin-top:-22px}
+.shoes svg{display:block;width:100%;height:auto;filter:drop-shadow(0 12px 18px rgba(201,47,5,.28))}
+.title{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 260px}
+h1{margin:0;line-height:.9;display:flex;flex-direction:column}
+.ballet{font-family:var(--script);font-weight:400;font-size:clamp(82px,16vw,168px);line-height:1.05;padding:0 .12em .06em 0;
+  background:linear-gradient(100deg,var(--o4),var(--o2) 30%,var(--o1) 60%,var(--o3) 85%,var(--o6));-webkit-background-clip:text;background-clip:text;color:transparent}
+.place{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(28px,4.6vw,46px);line-height:1.1;margin-top:-.15em;color:var(--fg)}
+.sub{margin:10px 0 0;color:var(--muted)}
+.count{font-variant-numeric:tabular-nums;color:var(--fg);font-weight:800}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+.btn{font:inherit;font-weight:800;border-radius:999px;padding:12px 22px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);box-shadow:0 8px 22px -10px rgba(255,79,18,.7)}
+.btn:focus-visible{outline:3px solid var(--o2);outline-offset:2px}
+.hint{font-size:13px;color:var(--muted);margin:0}
+details.actions{display:block}
+details.actions summary{list-style:none}
+details.actions summary::-webkit-details-marker{display:none}
+.parts{display:flex;flex-direction:column;gap:8px;margin-top:12px;max-width:420px}
+.btn.part{justify-content:space-between}
+.btn.part span{font-weight:600;color:var(--muted);font-size:13px}
+.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(8px,1.5vw,16px);align-items:start;max-width:1000px;margin:0 auto;width:100%}
+.sec{margin:0;font-family:var(--serif);font-style:italic;font-weight:600;font-size:26px;display:flex;align-items:center;gap:14px}
+.sec::after{content:"";flex:1;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--o1),var(--o2) 40%,transparent)}
+.grid{columns:3 96px;column-gap:6px}
+@media (min-width:700px){.grid{columns:4 140px;column-gap:8px}}
+@media (min-width:1050px){.grid{columns:6 150px}}
+.tile{--ring:var(--o1);display:block;width:100%;margin:0 0 6px;padding:0;border:0;background:var(--line);border-radius:8px;overflow:hidden;cursor:zoom-in;break-inside:avoid;transition:box-shadow .25s}
+@media (min-width:700px){.grid .tile{margin-bottom:8px}}
+.feat .tile{margin:0;border-radius:12px}
+.feat .tile.wide{grid-column:1/-1}
+@media (min-width:600px){.feat{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px}}
+.tile:nth-child(4n+2){--ring:var(--o2)}.tile:nth-child(4n+3){--ring:var(--o5)}.tile:nth-child(4n){--ring:var(--o3)}
+.tile img{display:block;width:100%;height:auto;transition:transform .35s ease}
+.tile:hover{box-shadow:0 0 0 3px var(--ring)}
+.tile:hover img{transform:scale(1.03)}
+.tile:focus-visible{outline:3px solid var(--ring);outline-offset:2px}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0;margin:0}
+footer{text-align:center;color:var(--muted);font-size:13px}
+footer b{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent)}
+.lb{position:fixed;inset:0;z-index:50;background:var(--scrim);display:flex;flex-direction:column;color:#fff0e5;
+  padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}
+.lb-n{font-variant-numeric:tabular-nums;font-size:13px;letter-spacing:.08em;opacity:.8}
+.close{background:transparent;border:0;color:#fff;font-size:32px;line-height:1;cursor:pointer;padding:4px 10px}
+.lb-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;position:relative;padding:0 8px}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:24px;cursor:pointer}
+.nav.prev{left:12px}.nav.next{right:12px}
+@media (max-width:640px){.nav{display:none}}
+.lb-bottom{display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 16px 18px}
+.lb .btn{background:#ff4f12;border-color:#ff4f12;color:#0a0605}
+.lb .btn.ghost{background:transparent;color:#fff0e5;border-color:rgba(255,255,255,.3)}
+.msg{font-size:13px;opacity:.85;min-height:1.2em;text-align:center;max-width:46ch;margin:0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="ribbon" aria-hidden="true"><svg viewBox="0 0 1240 30" preserveAspectRatio="none"><path d="M0 14 C 60 2, 100 26, 155 14 S 250 2, 310 14 S 405 26, 465 14 S 560 2, 620 14 S 715 26, 775 14 S 870 2, 930 14 S 1025 26, 1085 14 S 1180 2, 1240 14" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M0 19 C 60 7, 100 31, 155 19 S 250 7, 310 19 S 405 31, 465 19 S 560 7, 620 19 S 715 31, 775 19 S 870 7, 930 19 S 1025 31, 1085 19 S 1180 7, 1240 19" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".45"/></svg></div>
+<main class="wrap">
+  <header>
+    <div class="shoes" aria-hidden="true"><svg viewBox="40 0 150 250">
+      <defs>
+        <linearGradient id="sat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8752"/><stop offset=".45" stop-color="#ff4f12"/><stop offset="1" stop-color="#c92f05"/></linearGradient>
+        <g id="shoe">
+          <path d="M18 22 C 8 30, 8 56, 22 66 C 70 70, 130 70, 176 68 C 186 68, 190 64, 190 57 L 190 46 C 190 39, 186 35, 178 34 C 158 31, 132 20, 108 20 C 80 40, 40 40, 18 22 Z" fill="url(#sat)"/>
+          <path d="M18 22 C 40 40, 80 40, 108 20 C 82 31, 44 32, 18 22 Z" fill="#4a1201"/>
+          <path d="M21 26 C 44 42, 82 42, 105 24" stroke="#ffc2a3" stroke-width="1.4" fill="none" opacity=".8"/>
+          <path d="M160 31 C 156 44, 156 56, 162 68" stroke="#a82705" stroke-width="1.6" fill="none"/>
+          <path d="M28 66 C 80 64, 130 64, 178 66" stroke="#8f2004" stroke-width="2" fill="none" opacity=".5"/>
+          <path d="M118 28 C 140 28, 168 33, 182 41" stroke="#ffd2bb" stroke-width="2.4" stroke-linecap="round" fill="none" opacity=".8"/>
+        </g>
+      </defs>
+      <g fill="none" stroke="#ff4f12" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M81 136 C 66 96, 104 66, 108 30"/><path d="M146 138 C 158 96, 116 66, 112 30"/>
+        <path d="M110 30 C 92 14, 78 26, 92 32 C 100 35, 106 32, 110 30 C 114 32, 120 35, 128 32 C 142 26, 128 14, 110 30 Z"/>
+        <path d="M109 31 C 104 44, 96 50, 88 52"/><path d="M111 31 C 118 44, 126 50, 136 50"/>
+      </g>
+      <circle cx="110" cy="30" r="4" fill="#ff4f12"/>
+      <use href="#shoe" transform="translate(58 92) rotate(74 18 22) scale(.7)"/>
+      <use href="#shoe" transform="translate(118 96) rotate(62 18 22) scale(.7)"/>
+    </svg></div>
+    <div class="title">
+      <h1><span class="ballet">Ballet</span><span class="place">Santa Dorotéia</span></h1>
+      <p class="sub"><span class="count">274 fotos.</span> Toque em uma foto para ver em tela cheia e baixar na qualidade original.</p>
+      <details class="actions" id="all">
+        <summary class="btn primary">Baixar todas as fotos</summary>
+        <div class="parts">
+          <!--PARTS--><p class="hint">As 274 fotos (197 MB) estão divididas em 3 arquivos .zip. Baixe cada parte, de preferência no Wi‑Fi.</p><a class="btn part" href="zip/Ballet_SantaDoroteia_parte1.zip" download data-goatcounter-click="ballet/baixar-todas/parte-1" data-goatcounter-title="ballet: baixar todas, parte 1">Parte 1 <span>fotos 1–117 · 80 MB</span></a><a class="btn part" href="zip/Ballet_SantaDoroteia_parte2.zip" download data-goatcounter-click="ballet/baixar-todas/parte-2" data-goatcounter-title="ballet: baixar todas, parte 2">Parte 2 <span>fotos 118–223 · 80 MB</span></a><a class="btn part" href="zip/Ballet_SantaDoroteia_parte3.zip" download data-goatcounter-click="ballet/baixar-todas/parte-3" data-goatcounter-title="ballet: baixar todas, parte 3">Parte 3 <span>fotos 224–274 · 37 MB</span></a><!--/PARTS-->
+        </div>
+      </details>
+    </div>
+  </header>
+  <section class="feat" id="feat" aria-label="Fotos em destaque"></section>
+  <h2 class="sec">Mais fotos</h2>
+  <section class="grid" id="grid" aria-label="Mais fotos"></section>
+  <footer><b>Ballet</b> · Santa Dorotéia</footer>
+</main>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+  <div class="lb-top"><span class="lb-n" id="lb-n"></span><button class="close" id="close" type="button" aria-label="Fechar">×</button></div>
+  <div class="lb-stage"><button class="nav prev" id="prev" type="button" aria-label="Foto anterior">‹</button><img id="lb-img" alt=""><button class="nav next" id="next" type="button" aria-label="Próxima foto">›</button></div>
+  <div class="lb-bottom">
+    <a class="btn" id="dl" href="#" download>Baixar foto</a>
+    <a class="btn ghost" id="orig" href="#" target="_blank" rel="noopener" hidden>Abrir em tamanho original</a>
+    <p class="msg" id="msg"></p>
+  </div>
+</div>
+<script>
+var P=[{"f":"Ballet_destaque_10.jpg","n":1,"w":900,"h":600,"d":1},{"f":"Ballet_destaque_01.jpg","n":2,"w":600,"h":900,"d":1},{"f":"Ballet_destaque_02.jpg","n":3,"w":600,"h":900,"d":1},{"f":"Ballet_destaque_03.jpg","n":4,"w":600,"h":900,"d":1},{"f":"Ballet_destaque_04.jpg","n":5,"w":600,"h":900,"d":1},{"f":"Ballet_destaque_05.jpg","n":6,"w":600,"h":900,"d":1},{"f":"Ballet_destaque_06.jpg","n":7,"w":600,"h":900,"d":1},{"f":"Ballet_destaque_07.jpg","n":8,"w":600,"h":900,"d":1},{"f":"Ballet_destaque_08.jpg","n":9,"w":600,"h":900,"d":1},{"f":"Ballet_destaque_09.jpg","n":10,"w":600,"h":900,"d":1},{"f":"IMG_3083.jpg","n":11,"w":427,"h":640,"d":0},{"f":"IMG_3086.jpg","n":12,"w":427,"h":640,"d":0},{"f":"IMG_3094.jpg","n":13,"w":427,"h":640,"d":0},{"f":"IMG_3135.jpg","n":14,"w":427,"h":640,"d":0},{"f":"IMG_3136.jpg","n":15,"w":427,"h":640,"d":0},{"f":"IMG_3140.jpg","n":16,"w":427,"h":640,"d":0},{"f":"IMG_3142.jpg","n":17,"w":640,"h":427,"d":0},{"f":"IMG_3148.jpg","n":18,"w":640,"h":427,"d":0},{"f":"IMG_3159.jpg","n":19,"w":640,"h":426,"d":0},{"f":"IMG_3171.jpg","n":20,"w":640,"h":427,"d":0},{"f":"IMG_3178.jpg","n":21,"w":640,"h":427,"d":0},{"f":"IMG_3187.jpg","n":22,"w":427,"h":640,"d":0},{"f":"IMG_3193.jpg","n":23,"w":427,"h":640,"d":0},{"f":"IMG_3236.jpg","n":24,"w":427,"h":640,"d":0},{"f":"IMG_3240.jpg","n":25,"w":427,"h":640,"d":0},{"f":"IMG_3247.jpg","n":26,"w":427,"h":640,"d":0},{"f":"IMG_3250.jpg","n":27,"w":427,"h":640,"d":0},{"f":"IMG_3251.jpg","n":28,"w":640,"h":427,"d":0},{"f":"IMG_3253.jpg","n":29,"w":640,"h":427,"d":0},{"f":"IMG_3256.jpg","n":30,"w":640,"h":427,"d":0},{"f":"IMG_3258.jpg","n":31,"w":426,"h":640,"d":0},{"f":"IMG_3261.jpg","n":32,"w":640,"h":457,"d":0},{"f":"IMG_3267.jpg","n":33,"w":640,"h":427,"d":0},{"f":"IMG_3268.jpg","n":34,"w":640,"h":426,"d":0},{"f":"IMG_3271.jpg","n":35,"w":427,"h":640,"d":0},{"f":"IMG_3272.jpg","n":36,"w":427,"h":640,"d":0},{"f":"IMG_3281.jpg","n":37,"w":640,"h":427,"d":0},{"f":"IMG_3284.jpg","n":38,"w":640,"h":427,"d":0},{"f":"IMG_3287.jpg","n":39,"w":427,"h":640,"d":0},{"f":"IMG_3298.jpg","n":40,"w":640,"h":427,"d":0},{"f":"IMG_3304.jpg","n":41,"w":640,"h":427,"d":0},{"f":"IMG_3306.jpg","n":42,"w":640,"h":427,"d":0},{"f":"IMG_3319.jpg","n":43,"w":640,"h":427,"d":0},{"f":"IMG_3325.jpg","n":44,"w":427,"h":640,"d":0},{"f":"IMG_3326.jpg","n":45,"w":427,"h":640,"d":0},{"f":"IMG_3327.jpg","n":46,"w":427,"h":640,"d":0},{"f":"IMG_3329.jpg","n":47,"w":427,"h":640,"d":0},{"f":"IMG_3341.jpg","n":48,"w":427,"h":640,"d":0},{"f":"IMG_3343.jpg","n":49,"w":427,"h":640,"d":0},{"f":"IMG_3345.jpg","n":50,"w":427,"h":640,"d":0},{"f":"IMG_3350.jpg","n":51,"w":427,"h":640,"d":0},{"f":"IMG_3359.jpg","n":52,"w":427,"h":640,"d":0},{"f":"IMG_3363.jpg","n":53,"w":427,"h":640,"d":0},{"f":"IMG_3367.jpg","n":54,"w":426,"h":640,"d":0},{"f":"IMG_3376.jpg","n":55,"w":427,"h":640,"d":0},{"f":"IMG_3379.jpg","n":56,"w":427,"h":640,"d":0},{"f":"IMG_3385.jpg","n":57,"w":427,"h":640,"d":0},{"f":"IMG_3390.jpg","n":58,"w":427,"h":640,"d":0},{"f":"IMG_3406.jpg","n":59,"w":427,"h":640,"d":0},{"f":"IMG_3408.jpg","n":60,"w":427,"h":640,"d":0},{"f":"IMG_3424.jpg","n":61,"w":427,"h":640,"d":0},{"f":"IMG_3434.jpg","n":62,"w":640,"h":427,"d":0},{"f":"IMG_3439.jpg","n":63,"w":427,"h":640,"d":0},{"f":"IMG_3444.jpg","n":64,"w":427,"h":640,"d":0},{"f":"IMG_3450.jpg","n":65,"w":427,"h":640,"d":0},{"f":"IMG_3456.jpg","n":66,"w":427,"h":640,"d":0},{"f":"IMG_3459.jpg","n":67,"w":427,"h":640,"d":0},{"f":"IMG_3460.jpg","n":68,"w":427,"h":640,"d":0},{"f":"IMG_3473.jpg","n":69,"w":427,"h":640,"d":0},{"f":"IMG_3483.jpg","n":70,"w":640,"h":427,"d":0},{"f":"IMG_3486.jpg","n":71,"w":427,"h":640,"d":0},{"f":"IMG_3490.jpg","n":72,"w":427,"h":640,"d":0},{"f":"IMG_3495.jpg","n":73,"w":427,"h":640,"d":0},{"f":"IMG_3505.jpg","n":74,"w":427,"h":640,"d":0},{"f":"IMG_3508.jpg","n":75,"w":427,"h":640,"d":0},{"f":"IMG_3522.jpg","n":76,"w":427,"h":640,"d":0},{"f":"IMG_3525.jpg","n":77,"w":427,"h":640,"d":0},{"f":"IMG_3532.jpg","n":78,"w":427,"h":640,"d":0},{"f":"IMG_3534.jpg","n":79,"w":427,"h":640,"d":0},{"f":"IMG_3540.jpg","n":80,"w":427,"h":640,"d":0},{"f":"IMG_3545.jpg","n":81,"w":427,"h":640,"d":0},{"f":"IMG_3548.jpg","n":82,"w":427,"h":640,"d":0},{"f":"IMG_3551.jpg","n":83,"w":426,"h":640,"d":0},{"f":"IMG_3555 (1).jpg","n":84,"w":427,"h":640,"d":0},{"f":"IMG_3557.jpg","n":85,"w":427,"h":640,"d":0},{"f":"IMG_3559 (1).jpg","n":86,"w":427,"h":640,"d":0},{"f":"IMG_3569 (1).jpg","n":87,"w":640,"h":427,"d":0},{"f":"IMG_3592 (1).jpg","n":88,"w":427,"h":640,"d":0},{"f":"IMG_3599 (1).jpg","n":89,"w":427,"h":640,"d":0},{"f":"IMG_3609.jpg","n":90,"w":427,"h":640,"d":0},{"f":"IMG_3613.jpg","n":91,"w":640,"h":427,"d":0},{"f":"IMG_3620.jpg","n":92,"w":640,"h":427,"d":0},{"f":"IMG_3623 (1).jpg","n":93,"w":640,"h":427,"d":0},{"f":"IMG_3664.jpg","n":94,"w":427,"h":640,"d":0},{"f":"IMG_3670.jpg","n":95,"w":427,"h":640,"d":0},{"f":"IMG_3671.jpg","n":96,"w":427,"h":640,"d":0},{"f":"IMG_3672.jpg","n":97,"w":427,"h":640,"d":0},{"f":"IMG_3674 (1).jpg","n":98,"w":427,"h":640,"d":0},{"f":"IMG_3678.jpg","n":99,"w":427,"h":640,"d":0},{"f":"IMG_3681.jpg","n":100,"w":427,"h":640,"d":0},{"f":"IMG_3685.jpg","n":101,"w":427,"h":640,"d":0},{"f":"IMG_3686.jpg","n":102,"w":427,"h":640,"d":0},{"f":"IMG_3691.jpg","n":103,"w":427,"h":640,"d":0},{"f":"IMG_3692 (1).jpg","n":104,"w":427,"h":640,"d":0},{"f":"IMG_3698 (1).jpg","n":105,"w":426,"h":640,"d":0},{"f":"IMG_3713.jpg","n":106,"w":427,"h":640,"d":0},{"f":"IMG_3716.jpg","n":107,"w":427,"h":640,"d":0},{"f":"IMG_3717.jpg","n":108,"w":426,"h":640,"d":0},{"f":"IMG_3722.jpg","n":109,"w":427,"h":640,"d":0},{"f":"IMG_3727.jpg","n":110,"w":427,"h":640,"d":0},{"f":"IMG_3745.jpg","n":111,"w":640,"h":427,"d":0},{"f":"IMG_3751.jpg","n":112,"w":640,"h":427,"d":0},{"f":"IMG_3762.jpg","n":113,"w":426,"h":640,"d":0},{"f":"IMG_3773.jpg","n":114,"w":427,"h":640,"d":0},{"f":"IMG_3792.jpg","n":115,"w":640,"h":426,"d":0},{"f":"IMG_3798.jpg","n":116,"w":640,"h":427,"d":0},{"f":"IMG_3800.jpg","n":117,"w":427,"h":640,"d":0},{"f":"IMG_3801.jpg","n":118,"w":427,"h":640,"d":0},{"f":"IMG_3807.jpg","n":119,"w":427,"h":640,"d":0},{"f":"IMG_3818.jpg","n":120,"w":427,"h":640,"d":0},{"f":"IMG_3826.jpg","n":121,"w":427,"h":640,"d":0},{"f":"IMG_3827.jpg","n":122,"w":427,"h":640,"d":0},{"f":"IMG_3829.jpg","n":123,"w":640,"h":427,"d":0},{"f":"IMG_3839.jpg","n":124,"w":427,"h":640,"d":0},{"f":"IMG_3842.jpg","n":125,"w":427,"h":640,"d":0},{"f":"IMG_3843.jpg","n":126,"w":427,"h":640,"d":0},{"f":"IMG_3845.jpg","n":127,"w":427,"h":640,"d":0},{"f":"IMG_3847.jpg","n":128,"w":427,"h":640,"d":0},{"f":"IMG_3848.jpg","n":129,"w":640,"h":427,"d":0},{"f":"IMG_3850.jpg","n":130,"w":640,"h":572,"d":0},{"f":"IMG_3855.jpg","n":131,"w":640,"h":427,"d":0},{"f":"IMG_3857.jpg","n":132,"w":427,"h":640,"d":0},{"f":"IMG_3863.jpg","n":133,"w":427,"h":640,"d":0},{"f":"IMG_3865.jpg","n":134,"w":427,"h":640,"d":0},{"f":"IMG_3868.jpg","n":135,"w":427,"h":640,"d":0},{"f":"IMG_3880.jpg","n":136,"w":640,"h":426,"d":0},{"f":"IMG_3888.jpg","n":137,"w":427,"h":640,"d":0},{"f":"IMG_3892.jpg","n":138,"w":427,"h":640,"d":0},{"f":"IMG_3897.jpg","n":139,"w":427,"h":640,"d":0},{"f":"IMG_3906.jpg","n":140,"w":427,"h":640,"d":0},{"f":"IMG_3909.jpg","n":141,"w":427,"h":640,"d":0},{"f":"IMG_3912.jpg","n":142,"w":427,"h":640,"d":0},{"f":"IMG_3927.jpg","n":143,"w":427,"h":640,"d":0},{"f":"IMG_3937.jpg","n":144,"w":427,"h":640,"d":0},{"f":"IMG_3952.jpg","n":145,"w":427,"h":640,"d":0},{"f":"IMG_3959.jpg","n":146,"w":640,"h":427,"d":0},{"f":"IMG_3961.jpg","n":147,"w":427,"h":640,"d":0},{"f":"IMG_3973.jpg","n":148,"w":640,"h":427,"d":0},{"f":"IMG_3994.jpg","n":149,"w":427,"h":640,"d":0},{"f":"IMG_4008.jpg","n":150,"w":427,"h":640,"d":0},{"f":"IMG_4012.jpg","n":151,"w":640,"h":427,"d":0},{"f":"IMG_4014.jpg","n":152,"w":427,"h":640,"d":0},{"f":"IMG_4015.jpg","n":153,"w":427,"h":640,"d":0},{"f":"IMG_4017.jpg","n":154,"w":427,"h":640,"d":0},{"f":"IMG_4023.jpg","n":155,"w":427,"h":640,"d":0},{"f":"IMG_4038.jpg","n":156,"w":427,"h":640,"d":0},{"f":"IMG_4043.jpg","n":157,"w":640,"h":426,"d":0},{"f":"IMG_4050.jpg","n":158,"w":640,"h":427,"d":0},{"f":"IMG_4054.jpg","n":159,"w":640,"h":427,"d":0},{"f":"IMG_4063.jpg","n":160,"w":426,"h":640,"d":0},{"f":"IMG_4070.jpg","n":161,"w":426,"h":640,"d":0},{"f":"IMG_4076.jpg","n":162,"w":427,"h":640,"d":0},{"f":"IMG_4079.jpg","n":163,"w":427,"h":640,"d":0},{"f":"IMG_4080.jpg","n":164,"w":427,"h":640,"d":0},{"f":"IMG_4081.jpg","n":165,"w":465,"h":640,"d":0},{"f":"IMG_4082.jpg","n":166,"w":427,"h":640,"d":0},{"f":"IMG_4089.jpg","n":167,"w":427,"h":640,"d":0},{"f":"IMG_4090.jpg","n":168,"w":640,"h":427,"d":0},{"f":"IMG_4097.jpg","n":169,"w":427,"h":640,"d":0},{"f":"IMG_4102.jpg","n":170,"w":640,"h":427,"d":0},{"f":"IMG_4107.jpg","n":171,"w":427,"h":640,"d":0},{"f":"IMG_4113.jpg","n":172,"w":640,"h":427,"d":0},{"f":"IMG_4114.jpg","n":173,"w":640,"h":427,"d":0},{"f":"IMG_4118.jpg","n":174,"w":640,"h":427,"d":0},{"f":"IMG_4120.jpg","n":175,"w":427,"h":640,"d":0},{"f":"IMG_4125.jpg","n":176,"w":427,"h":640,"d":0},{"f":"IMG_4136.jpg","n":177,"w":427,"h":640,"d":0},{"f":"IMG_4138.jpg","n":178,"w":427,"h":640,"d":0},{"f":"IMG_4141.jpg","n":179,"w":427,"h":640,"d":0},{"f":"IMG_4148.jpg","n":180,"w":427,"h":640,"d":0},{"f":"IMG_4168.jpg","n":181,"w":427,"h":640,"d":0},{"f":"IMG_4185.jpg","n":182,"w":427,"h":640,"d":0},{"f":"IMG_4187.jpg","n":183,"w":427,"h":640,"d":0},{"f":"IMG_4190.jpg","n":184,"w":427,"h":640,"d":0},{"f":"IMG_4191.jpg","n":185,"w":427,"h":640,"d":0},{"f":"IMG_4193.jpg","n":186,"w":427,"h":640,"d":0},{"f":"IMG_4195.jpg","n":187,"w":427,"h":640,"d":0},{"f":"IMG_4197.jpg","n":188,"w":640,"h":427,"d":0},{"f":"IMG_4200.jpg","n":189,"w":426,"h":640,"d":0},{"f":"IMG_4205.jpg","n":190,"w":427,"h":640,"d":0},{"f":"IMG_4210.jpg","n":191,"w":427,"h":640,"d":0},{"f":"IMG_4219.jpg","n":192,"w":427,"h":640,"d":0},{"f":"IMG_4223.jpg","n":193,"w":427,"h":640,"d":0},{"f":"IMG_4234.jpg","n":194,"w":427,"h":640,"d":0},{"f":"IMG_4245.jpg","n":195,"w":427,"h":640,"d":0},{"f":"IMG_4253.jpg","n":196,"w":426,"h":640,"d":0},{"f":"IMG_4257.jpg","n":197,"w":427,"h":640,"d":0},{"f":"IMG_4282.jpg","n":198,"w":427,"h":640,"d":0},{"f":"IMG_4289.jpg","n":199,"w":427,"h":640,"d":0},{"f":"IMG_4293.jpg","n":200,"w":427,"h":640,"d":0},{"f":"IMG_4331.jpg","n":201,"w":427,"h":640,"d":0},{"f":"IMG_4333.jpg","n":202,"w":427,"h":640,"d":0},{"f":"IMG_4334.jpg","n":203,"w":427,"h":640,"d":0},{"f":"IMG_4337.jpg","n":204,"w":427,"h":640,"d":0},{"f":"IMG_4356.jpg","n":205,"w":427,"h":640,"d":0},{"f":"IMG_4361.jpg","n":206,"w":426,"h":640,"d":0},{"f":"IMG_4362.jpg","n":207,"w":427,"h":640,"d":0},{"f":"IMG_4369.jpg","n":208,"w":427,"h":640,"d":0},{"f":"IMG_4387.jpg","n":209,"w":425,"h":640,"d":0},{"f":"IMG_4391.jpg","n":210,"w":427,"h":640,"d":0},{"f":"IMG_4422.jpg","n":211,"w":427,"h":640,"d":0},{"f":"IMG_4429.jpg","n":212,"w":427,"h":640,"d":0},{"f":"IMG_4433.jpg","n":213,"w":427,"h":640,"d":0},{"f":"IMG_4434.jpg","n":214,"w":427,"h":640,"d":0},{"f":"IMG_4436.jpg","n":215,"w":427,"h":640,"d":0},{"f":"IMG_4483.jpg","n":216,"w":427,"h":640,"d":0},{"f":"IMG_4494.jpg","n":217,"w":427,"h":640,"d":0},{"f":"IMG_4498.jpg","n":218,"w":427,"h":640,"d":0},{"f":"IMG_4526.jpg","n":219,"w":426,"h":640,"d":0},{"f":"IMG_4531.jpg","n":220,"w":427,"h":640,"d":0},{"f":"IMG_4536.jpg","n":221,"w":427,"h":640,"d":0},{"f":"IMG_4546.jpg","n":222,"w":427,"h":640,"d":0},{"f":"IMG_4565.jpg","n":223,"w":640,"h":427,"d":0},{"f":"IMG_4569.jpg","n":224,"w":640,"h":427,"d":0},{"f":"IMG_4580.jpg","n":225,"w":427,"h":640,"d":0},{"f":"IMG_4581.jpg","n":226,"w":427,"h":640,"d":0},{"f":"IMG_4582.jpg","n":227,"w":427,"h":640,"d":0},{"f":"IMG_4616.jpg","n":228,"w":427,"h":640,"d":0},{"f":"IMG_4631.jpg","n":229,"w":427,"h":640,"d":0},{"f":"IMG_4651.jpg","n":230,"w":427,"h":640,"d":0},{"f":"IMG_4655.jpg","n":231,"w":427,"h":640,"d":0},{"f":"IMG_4668.jpg","n":232,"w":427,"h":640,"d":0},{"f":"IMG_4690.jpg","n":233,"w":427,"h":640,"d":0},{"f":"IMG_4722.jpg","n":234,"w":427,"h":640,"d":0},{"f":"IMG_4742.jpg","n":235,"w":427,"h":640,"d":0},{"f":"IMG_4744.jpg","n":236,"w":427,"h":640,"d":0},{"f":"IMG_4757.jpg","n":237,"w":640,"h":427,"d":0},{"f":"IMG_4759.jpg","n":238,"w":640,"h":427,"d":0},{"f":"IMG_4769.jpg","n":239,"w":427,"h":640,"d":0},{"f":"IMG_4774.jpg","n":240,"w":427,"h":640,"d":0},{"f":"IMG_4783.jpg","n":241,"w":427,"h":640,"d":0},{"f":"IMG_4788.jpg","n":242,"w":427,"h":640,"d":0},{"f":"IMG_4801.jpg","n":243,"w":427,"h":640,"d":0},{"f":"IMG_4802.jpg","n":244,"w":640,"h":496,"d":0},{"f":"IMG_4815.jpg","n":245,"w":640,"h":427,"d":0},{"f":"IMG_4824.jpg","n":246,"w":427,"h":640,"d":0},{"f":"IMG_4852.jpg","n":247,"w":640,"h":426,"d":0},{"f":"IMG_4864.jpg","n":248,"w":640,"h":427,"d":0},{"f":"IMG_4865.jpg","n":249,"w":640,"h":427,"d":0},{"f":"IMG_4870.jpg","n":250,"w":510,"h":640,"d":0},{"f":"IMG_4888.jpg","n":251,"w":512,"h":640,"d":0},{"f":"IMG_4894.jpg","n":252,"w":640,"h":427,"d":0},{"f":"IMG_4903.jpg","n":253,"w":640,"h":427,"d":0},{"f":"IMG_4910.jpg","n":254,"w":640,"h":427,"d":0},{"f":"IMG_4921.jpg","n":255,"w":640,"h":427,"d":0},{"f":"IMG_4932.jpg","n":256,"w":426,"h":640,"d":0},{"f":"IMG_4934.jpg","n":257,"w":427,"h":640,"d":0},{"f":"IMG_4939.jpg","n":258,"w":640,"h":427,"d":0},{"f":"IMG_4950.jpg","n":259,"w":426,"h":640,"d":0},{"f":"IMG_4952.jpg","n":260,"w":640,"h":426,"d":0},{"f":"IMG_4975.jpg","n":261,"w":640,"h":427,"d":0},{"f":"IMG_4990.jpg","n":262,"w":640,"h":427,"d":0},{"f":"IMG_4998.jpg","n":263,"w":640,"h":427,"d":0},{"f":"IMG_5001.jpg","n":264,"w":640,"h":427,"d":0},{"f":"IMG_5013.jpg","n":265,"w":640,"h":427,"d":0},{"f":"IMG_5018.jpg","n":266,"w":640,"h":426,"d":0},{"f":"IMG_5022.jpg","n":267,"w":640,"h":427,"d":0},{"f":"IMG_5040.jpg","n":268,"w":640,"h":427,"d":0},{"f":"IMG_5044.jpg","n":269,"w":640,"h":427,"d":0},{"f":"IMG_5052.jpg","n":270,"w":640,"h":426,"d":0},{"f":"IMG_5062.jpg","n":271,"w":640,"h":427,"d":0},{"f":"IMG_5071.jpg","n":272,"w":640,"h":426,"d":0},{"f":"IMG_5084.jpg","n":273,"w":640,"h":427,"d":0},{"f":"IMG_5094.jpg","n":274,"w":640,"h":426,"d":0}];
+var G='ballet';
+var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+var feat=document.getElementById('feat'),grid=document.getElementById('grid');
+function pad(n){return String(n).padStart(3,'0')}
+function tile(p,i){return '<button class="tile'+(p.d&&p.w>p.h?' wide':'')+'" type="button" data-i="'+i+'" aria-label="Abrir foto '+p.n+'"><img src="mini/'+pad(p.n)+'.jpg" alt="Foto '+p.n+' do ballet" width="'+p.w+'" height="'+p.h+'" loading="'+(p.d?'eager':'lazy')+'" decoding="async"></button>'}
+var f=[],r=[];P.forEach(function(p,i){(p.d?f:r).push(tile(p,i))});
+feat.innerHTML=f.join('');grid.innerHTML=r.join('');
+if(!P.length){grid.innerHTML='<p class="empty">As fotos chegam em breve.</p>';document.getElementById('all').hidden=true}
+function onTile(e){var b=e.target.closest('.tile');if(b)open(+b.dataset.i)}
+feat.addEventListener('click',onTile);grid.addEventListener('click',onTile);
+var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),dl=document.getElementById('dl'),orig=document.getElementById('orig'),msg=document.getElementById('msg'),cur=0,blob=null,blobFor=-1;
+function open(i){lb.hidden=false;document.body.style.overflow='hidden';show(i);dl.focus()}
+function close(){lb.hidden=true;document.body.style.overflow=''}
+function show(i){cur=(i+P.length)%P.length;var p=P[cur];
+  img.src='tela/'+pad(p.n)+'.jpg';img.alt='Foto '+p.n+' do ballet';
+  document.getElementById('lb-n').textContent=(cur+1)+' / '+P.length;
+  dl.href='fotos/'+p.f;dl.setAttribute('download',p.f);orig.href='fotos/'+p.f;
+  orig.hidden=!isIOS;msg.textContent=isIOS?'No iPhone: toque em "Baixar foto" e escolha "Salvar imagem" para ir direto para o app Fotos.':'';
+  blob=null;blobFor=-1;
+  if(isIOS&&navigator.canShare){var want=cur;fetch('fotos/'+p.f).then(function(r){return r.blob()}).then(function(b){if(want===cur){blob=b;blobFor=want}}).catch(function(){})}
+}
+function track(path,title){try{if(window.goatcounter&&goatcounter.count)goatcounter.count({path:path,title:title,event:true})}catch(_){}}
+dl.addEventListener('click',function(e){
+  track(G+'/foto/'+pad(P[cur].n),G+': baixou a foto '+P[cur].n+' ('+P[cur].f+')');
+  if(!isIOS||!navigator.canShare)return; // Android e computador: download normal
+  var p=P[cur];
+  if(blob&&blobFor===cur){
+    var file=new File([blob],p.f,{type:blob.type||'image/jpeg'});
+    if(navigator.canShare({files:[file]})){e.preventDefault();
+      navigator.share({files:[file]}).then(function(){msg.textContent='Pronto! Se escolheu "Salvar imagem", a foto está no app Fotos.'}).catch(function(err){if(err&&err.name!=='AbortError')location.href='fotos/'+p.f})}
+  }else{e.preventDefault();msg.textContent='Preparando a foto em alta qualidade… toque de novo em um instante.'}
+});
+document.getElementById('close').onclick=close;
+document.getElementById('prev').onclick=function(){show(cur-1)};
+document.getElementById('next').onclick=function(){show(cur+1)};
+document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')show(cur+1);else if(e.key==='ArrowLeft')show(cur-1)});
+var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(sx==null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1));sx=null});
+</script>
+<script data-goatcounter="https://mariatomazfoto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
